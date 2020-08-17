@@ -1,0 +1,100 @@
+version: '2.2'
+services:
+
+  es_01:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.0
+    container_name: es_01
+    environment:
+      - node.name=es_01
+      - cluster.name=es-docker-cluster
+      - discovery.seed_hosts=es_02
+      - cluster.initial_master_nodes=es_01,es_02
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./volumes/els1/:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    networks:
+      - elastic
+
+  es02:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.0
+    container_name: es_02
+    environment:
+      - node.name=es_02
+      - cluster.name=es-docker-cluster
+      - discovery.seed_hosts=es_01
+      - cluster.initial_master_nodes=es_01,es_02
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./volumes/els2/:/usr/share/elasticsearch/data
+    ports:
+      - 9201:9200
+    networks:
+      - elastic
+
+  es_03:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.0
+    container_name: es_03
+    environment:
+      - node.name=es_03
+      - cluster.name=es-docker-cluster
+      - discovery.seed_hosts=es_01,es_02
+      - cluster.initial_master_nodes=es_01,es_02,es_03
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./volumes/els3/:/usr/share/elasticsearch/data
+    ports:
+      - 9202:9200
+    networks:
+      - elastic
+
+  kib_01:
+    image: docker.elastic.co/kibana/kibana:7.8.0
+    container_name: kib_01
+    ports:
+      - 5601:5601
+    environment:
+      ELASTICSEARCH_URL: http://es_01:9200
+      ELASTICSEARCH_HOSTS: http://es_01:9200
+      SERVER_HOST: 0.0.0.0
+    networks:
+      - elastic
+
+  notebook1:
+    build:
+      context: .
+      dockerfile: docker/jupyter-notebook
+    container_name: notebook1
+    environment:
+      - JUPYTER_TOKEN=${JUPYTER_PASSWORD}
+      - JUPYTER_ENABLE_LAB=yes
+    ports:
+      - "8890:8888"
+      - "8501:8501"
+    networks:
+      - elastic
+    volumes:
+      - ./notebooks/:/wkrdir/notebooks
+      - ./scripts/:/wkrdir/scripts
+      - ./mappings/:/wkrdir/mappings
+      - ./outputs/:/wkrdir/outputs
+
+networks:
+  elastic:
+    driver: bridge
