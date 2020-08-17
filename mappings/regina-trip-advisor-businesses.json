@@ -1,0 +1,217 @@
+{
+  "mappings": {
+    "dynamic":"strict",
+      "properties": {
+        "category": {
+          "type": "text"
+        },
+        "bubbleRating": {
+          "type": "long"
+        },
+        "detailUrl": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "entityType": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "experiencesCtaEncodedLink": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "experiencesCtaNumOffers": {
+          "type": "long"
+        },
+        "experiencesCtaStartingCost": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "geoPoint": {
+          "type":"geo_point"
+        },
+        "id": {
+          "type": "long"
+        },
+        "name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "numReviews": {
+          "type": "long"
+        },
+        "openHours": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "openNow": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "thumbnail": {
+          "properties": {
+            "caption": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "helpful_votes": {
+              "type": "long"
+            },
+            "id": {
+              "type": "long"
+            },
+            "images": {
+              "properties": {
+                "large": {
+                  "properties": {
+                    "height": {
+                      "type": "long"
+                    },
+                    "url": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "width": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "medium": {
+                  "properties": {
+                    "height": {
+                      "type": "long"
+                    },
+                    "url": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "width": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "original": {
+                  "properties": {
+                    "height": {
+                      "type": "long"
+                    },
+                    "url": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "width": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "small": {
+                  "properties": {
+                    "height": {
+                      "type": "long"
+                    },
+                    "url": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "width": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "thumbnail": {
+                  "properties": {
+                    "height": {
+                      "type": "long"
+                    },
+                    "url": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 40000
+                        }
+                      }
+                    },
+                    "width": {
+                      "type": "long"
+                    }
+                  }
+                }
+              }
+            },
+            "is_blessed": {
+              "type": "boolean"
+            },
+            "published_date": {
+              "type": "date"
+            },
+            "uploaded_date": {
+              "type": "date"
+            }
+          }
+        }
+      }
+    }
+  }
+
+

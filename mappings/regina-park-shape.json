@@ -1,0 +1,277 @@
+{
+  "mappings": {
+    "dynamic":"strict",
+      "properties": {
+        "GIS": {
+          "properties": {
+            "OPENSPACE": {
+              "properties": {
+                "ADDRESS": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "CCC_DATE": {
+                  "type": "float"
+                },
+                "DES": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "ER_MR_NUM": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "FAC_DATE": {
+                  "type": "float"
+                },
+                "GLOBALID": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "JOINT_USE_SITE": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "LEV": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "NAME": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "NOTES": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "OBJECTID": {
+                  "type": "long"
+                },
+                "OPSP_AREA": {
+                  "type": "float"
+                },
+                "PARK_CLASS": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "PARK_ZONE": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "PH_ST": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "SA_NUM": {
+                  "type": "float"
+                },
+                "STATUS": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "SUBDIVISION": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "SUB_TYPE": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "SYNERGENID": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "TAKEOVER_DATE": {
+                  "type": "float"
+                },
+                "TOTAL_IRRIGATED_HA": {
+                  "type": "float"
+                },
+                "TOTAL_UNIRRIGATED_HA": {
+                  "type": "float"
+                },
+                "TYPE": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "UPDATE_DATE": {
+                  "type": "long"
+                },
+                "UPDATE_USER": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            },
+            "ParkMaintDescription": {
+              "properties": {
+                "MAINT_DESC": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "OBJECTID": {
+                  "type": "float"
+                },
+                "PARK_CLASS": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            },
+            "Park_Activities": {
+              "properties": {
+                "ACTIVITIES": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "OBJECTID": {
+                  "type": "float"
+                },
+                "PARKSYNERGENID": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "PARK_NAME": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "TOTAL_AMENITIES": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "geometry": {
+          "properties": {
+            "rings": {
+              "type": "float"
+            }
+          }
+        },
+        "shape": {
+         "type":"geo_shape"
+        },
+          "GIS.OPENSPACE.MAINTENANCE_TYPE_DESCRIPTION":{
+              "type":"text"
+          }
+      }
+    }
+  
+}

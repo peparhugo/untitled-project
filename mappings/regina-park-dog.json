@@ -1,0 +1,52 @@
+{
+  "mappings": {
+    "dynamic":"strict",
+      "properties": {
+        "ADDRESS": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "NAME": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "OBJECTID": {
+          "type": "long"
+        },
+        "SITE_TYPE": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "geoPoint": {
+          "type":"geo_point"
+        },
+        "geometry": {
+          "properties": {
+            "x": {
+              "type": "float"
+            },
+            "y": {
+              "type": "float"
+            }
+          }
+        }
+      }
+    }
+  
+}
+

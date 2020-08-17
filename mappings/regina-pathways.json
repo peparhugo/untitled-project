@@ -1,0 +1,76 @@
+{
+  "mappings": {
+        "dynamic":"strict",
+      "properties": {
+        "ASSET_TYPE": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "CLEARED": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "GLOBALID": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "MAINTAINED_BY": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "OBJECTID": {
+          "type": "long"
+        },
+        "SHAPE": {
+          "properties": {
+            "LEN": {
+              "type": "float"
+            }
+          }
+        },
+        "SURFACE": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "WIDTH": {
+          "type": "float"
+        },
+        "geometry": {
+          "properties": {
+            "paths": {
+              "type": "float"
+            }
+          }
+        },
+        "path": {
+          "type":"geo_shape"
+        }
+      }
+    }
+  
+}

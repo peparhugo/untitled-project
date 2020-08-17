@@ -1,0 +1,191 @@
+{
+  "mappings": {
+    "dynamic":"strict",
+      "properties": {
+          "restaurantGroupId":{
+              "type":"text"
+          },
+        "cleanUrl": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "cuisines": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "defaultSort": {
+          "type": "float"
+        },
+        "distance": {
+          "properties": {
+            "unit": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "value": {
+              "type": "float"
+            }
+          }
+        },
+        "estimatedTime": {
+          "type": "long"
+        },
+        "fees": {
+          "properties": {
+            "feeCents": {
+              "type": "long"
+            },
+            "orderMinimumCents": {
+              "type": "long"
+            }
+          }
+        },
+        "geoPoint": {
+          "type":"geo_point"
+        },
+        "id": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "imageUrls": {
+          "properties": {
+            "listImageMobileUrl": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "listImageWebUrl": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "menuSmallUrl": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            }
+          }
+        },
+        "isNew": {
+          "type": "boolean"
+        },
+        "isOpen": {
+          "type": "boolean"
+        },
+        "isSponsored": {
+          "type": "boolean"
+        },
+        "location": {
+          "properties": {
+            "name": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "position": {
+              "properties": {
+                "latitude": {
+                  "type": "float"
+                },
+                "longitude": {
+                  "type": "float"
+                }
+              }
+            }
+          }
+        },
+        "maxEstimatedTime": {
+          "type": "long"
+        },
+        "minEstimatedTime": {
+          "type": "long"
+        },
+        "name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "online": {
+          "type": "boolean"
+        },
+        "searchData": {
+          "properties": {
+            "cuisines": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "name": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            }
+          }
+        },
+        "skipScore": {
+          "type": "long"
+        },
+        "topPlacement": {
+          "properties": {
+            "promotionId": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
